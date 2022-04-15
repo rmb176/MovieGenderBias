@@ -1,4 +1,6 @@
 # MovieGenderBias
+Final project for CS1699: AI for Good: Ethics and Implications
+Jared Belsky and Ryan Bennett 
 
 For this project, we plan to analyze gender bias in movie plot summaries over time.
 

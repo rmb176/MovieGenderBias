@@ -15,4 +15,10 @@ The corpus consisted of three main files we used
 2. The movie metadata `movie.metadata.tsv`
 3. The movie summaries `plot_summaries.txt`
 
+## Process
 
+First, we install necessary packages including, spacy and pandas.
+
+Next we import all three datasets, and go through cleaning the data. First we must get each dataset ready to be merged into one dataframce. To do this we needed to clean up the null characters in the charcter dataset, and then collect all of the characters into a single list that is associated with associated with a movie wikipedia ID. The same process is used for the movie summaries, associating each one with it's associated wikipedia ID. We then merge all of this data into one dataframe displayed below.
+
+![image](FinalMovieDF.png)

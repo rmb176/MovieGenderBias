@@ -23,6 +23,11 @@ Next we import all three datasets, and go through cleaning the data. First we mu
 
 ![image](FinalMovieDF.PNG)
 
-Now we use spacy and NLP processes to calculate a bias score for each movie.
+Now we use spacy and NLP processes to calculate a bias score for each movie. To do this, we simply find every subject/verb or subject/adjective pair in the summary and assign a gender to both. To assign a gender to the subject, we use the character list or pronouns to identify the gender. To assign a gender to the verb/adjective, we use word vectors to test its similarity to a set of stereotype words for each gender. If it is similar enough to any of these words, it is assigned the associated gender. Then, for every pair we come across, we increment a total counter, and increment a bias counter every time the subject gender matches the verb/adjective gender (This indicates stereotype is being reinforced). Then we simply divide the bias count by the total count to give the movie a final bias score between 0 and 1.
 
 Here are the graphs that represent bias over time.
+
+![linegraph](https://user-images.githubusercontent.com/55956679/164950617-956d6ca7-d519-48ce-8233-c8529e488956.png)
+![bestfit](https://user-images.githubusercontent.com/55956679/164950619-d4c00d9f-4ea1-4cb4-964b-df54d1d31a1b.png)
+
+There was a very small sample size before 1920, so the bias scores were unreliable. Because of this, we omitted all years before 1920. As we can see, there was a very slight increase in bias score over time. However, there are a number of limitations that make these results unreliable (as detailed in the full report). Nevertheless, it is interesting to see the results that our methods produced.
